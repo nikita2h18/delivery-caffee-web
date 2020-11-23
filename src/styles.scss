@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+$delivery-caffee-primary: mat-palette($mat-indigo);
+$delivery-caffee-accent: mat-palette($mat-pink, A200, A100, A400);
+
+$delivery-caffee-warn: mat-palette($mat-red);
+
+$delivery-caffee-theme: mat-light-theme((
+  color: (
+    primary: $delivery-caffee-primary,
+    accent: $delivery-caffee-accent,
+    warn: $delivery-caffee-warn,
+  )
+));
+
+@include angular-material-theme($delivery-caffee-theme);
